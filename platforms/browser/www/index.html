@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link rel="stylesheet" href="css/camera.css">
+        <title>Camera</title>
+    </head>
+    <body>
+        <div class="header">
+            <img src="img/camera.png" align="left" width="48.4px">
+            <span>Mi camara con filtros</span>
+        </div>
+        <canvas id="foto"></canvas>
+        <div class="button-container">
+            <button class="button button-filter">B &amp; N</button>
+            <button class="button button-filter">Negativo</button>
+            <button class="button button-filter">Sepia</button>
+        </div>
+        <div class="button-container">
+            <button id="button-action" class="button">Tomar foto</button>
+            <button id="button-gallery" class="button">Galeria</button>
+        </div>
+
+        <div class="footer">
+            Creando Apps. Aprende a programar aplicaciones moviles.
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/fastclick.js"></script>
+        <script type="text/javascript" src="js/effects.js"></script>
+        <script type="text/javascript" src="js/hammer.min.js"></script>
+        <script type="text/javascript" src="js/camera.js"></script>
+    </body>
+</html>
