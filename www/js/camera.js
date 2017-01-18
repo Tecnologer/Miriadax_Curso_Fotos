@@ -18,9 +18,13 @@ var app = {
 			app.aplicaFiltro("sepia");
 		});
 		botones[3].addEventListener("click",function(){
-			app.cargarFoto(Camera.PictureSourceType.CAMERA);
+			if(app.originalPhoto)
+				app.pintarFoto(app.originalPhoto);
 		});
 		botones[4].addEventListener("click",function(){
+			app.cargarFoto(Camera.PictureSourceType.CAMERA);
+		});
+		botones[5].addEventListener("click",function(){
 			app.cargarFoto(Camera.PictureSourceType.PHOTOLIBRARY);
 		});
 	},
@@ -51,6 +55,7 @@ var app = {
 		var ctx = canvas.getContext("2d");
 		canvas.width = img.width;
 		canvas.height = img.height;
+		app.originalPhoto = img;
 		ctx.drawImage(img, 0, 0, img.width, img.height);
 	},
 	aplicaFiltro: function(filterName){
